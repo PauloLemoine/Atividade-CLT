@@ -3,32 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../curriculo/css/curriculo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/curriculoboot.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <title>Paulo Lemoine</title>
 </head>
 <body>
+    <nav class="navbar fixed-bottom menuPaulo">
+        <div class="container-fluid d-flex justify-content-center">
+            <a href="#apresentacao" class="mx-2 menuPaulo">Paulo Lemoine</a>
+            <a href="#sobre" class="mx-2 menuPaulo">Sobre</a>
+            <a href="#formacao" class="mx-2 menuPaulo">Formação Acadêmica</a>
+            <a href="#experiencia" class="mx-2 menuPaulo">Experiência Profissional</a>
+            <a href="#endereco" class="mx-2 menuPaulo">Endereço/Contato</a>
+        </div>
+    </nav>
     <div id="apresentacao">
-        <h1>Paulo Lemoine</h1>
-        <img src="../curriculo/img/fotominha.jpg" alt="Paulo Lemoine" height="15%" width="15%">
-        <h4>(Back End Developer)</h4>
+        <div class="container-sm">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <img id="foto" class="opacity-60" src="../curriculo/img/fotominha.jpg" alt="Paulo Lemoine">
+                </div>
+                <div class="col-8 text-center">
+                    <h1>Paulo Lemoine Soares Paes</h1>
+                    <h4>(Back End Developer)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="sobre" class="container-sm ">
+        <h3>Sobre:</h3>
+        <div class="card topSobre rounded-0 my-2"></div>
+        <div class="container-sm">
+            <p id="sobreP">Graduando em <b>Análise e Desenvolvimento de Sistemas</b> pela Faculdade Senac-PE onde tive a chance de aprimorar a minhas habilidades de coding e desenvolvi um pequeno projeto de plano de saúde na Linguagem C. Ainda no primeiro período, eu e minha equipe de inovação fizemos uma ideação do projeto <b>"Linha Segura"</b> conseguimos chegar ao <b>Top 3 melhores Projetos</b> apresentados no evento "ProjteAí".</p>
+            <p class="text-center">
+                <a href="https://github.com/PauloLemoine" target="_blank"><img
+                    src="img/github.jpeg" alt="GitHub de Paulo" title="GitHub" height="45px"></a>
+                <a href="https://www.linkedin.com/in/paulolemoine/" target="_blank"><img
+                    src="img/official-linkedin-icon-png-12.jpg" alt="linkedin" title="Linkedin" height="45px"></a>
+            </p>
+        </div>
+    </div>
+    <div id="formacao">
+        <div class="container-sm">
+            <h3>Formação Acadêmica:</h3>
+            <div class="card topFormacao rounded-0 my-2"></div>
+            <ul>
+                <li>
+                  Graduando em Análise e Desenvolvimento de Sistemas (<a
+                    href="https://faculdadesenacpe.edu.br/graduacao/analise-e-desenvolvimento-de-sistemas"
+                    target="_blank"
+                    >Senac-PE</a>)
+                </li>
+                <li>
+                  Técnico em DMEF (Detecção de Micro Expressões Faciais) ministrado pelo
+                  Perito: Vitor Santos <a
+                    href="https://hotmart.com/pt-br/marketplace/produtos/deteccao-de-micro-expressoes-faciais/N19450788R?sck=HOTMART_SITE&search=76283b50-1b7e-4425-8fde-2bceefd63ef5&hotfeature=33"
+                    target="_blank"></a>
+                </li>
+                <li>
+                  Curso de Lógica de Programação (<a
+                    href="https://www.cursoemvideo.com/curso/curso-de-algoritmo/"
+                    target="_blank"
+                    >Curso de Algoritmo</a>)
+                </li>
+              </ul>
+              <h3>Cursando na plataforma Curso em Vídeo:</h3>
+              <ul>
+                <li>
+                    HTML5 e CSS3 (<a
+                    href="https://www.cursoemvideo.com/curso/html5-css3-modulo1/#google_vignette"
+                    target="_blank"
+                    >Curso de HTML5 e CSS3</a>)
+                </li>
+                <li>
+                    MySQL (<a
+                    href="https://www.cursoemvideo.com/curso/mysql/#google_vignette"
+                    target="_blank"
+                    >Curso de MySQL</a>)
+                </li>
+              </ul>
+        </div>
+    </div>
+    <div id="curriculo" class="mt-5">
+        <h2 class="text-center">Currículo</h2>
         <hr>
+    
+        <!-- Exibição dos dados do formulário -->
+        <div id="dadosFormulario" class="mb-4" style="display: none;">
+
+        </div>
+        <div class="container">
+            <!-- Formulário -->
+            <div id="form-container" class="form-container">
+              <h2 class="text-center mb-4">Preencha o Formulário</h2>
+              <form id="formulario">
+                <fieldset>
+                  <legend>Dados Pessoais</legend>
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="sobrenome" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="sobrenome" placeholder="Seu sobrenome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="(99) 99999-9999" required pattern="\(\d{2}\) \d{5}-\d{4}">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Seu e-mail" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="3" required></textarea>
+                  </div>
+                </fieldset>
+                
+                <fieldset>
+                  <legend>Informações do Projeto</legend>
+                  <div class="mb-3">
+                    <label for="lingua" class="form-label">Língua Aplicada no Serviço</label>
+                    <select class="form-select" id="lingua" required>
+                      <option value="" disabled selected>Selecione uma língua</option>
+                      <option value="inglês">Inglês</option>
+                      <option value="espanhol">Espanhol</option>
+                      <option value="francês">Francês</option>
+                      <option value="português">Português (pt-br)</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="protótipo" class="form-label">Protótipo (PDF, DOC, DOCX, JPEG ou PNG)</label>
+                    <input type="file" class="form-control" id="protótipo" accept=".pdf,.doc,.docx,.jpeg,.png" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Linguagens Preferidas</label>
+                    <select class="form-select" id="linguagens" required>
+                      <option value="" disabled selected>Selecione uma Linguagem</option>
+                      <option value="Java">Java</option>
+                      <option value="C">C</option>
+                      <option value="C++">C++</option>
+                      <option value="PHP">PHP</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Banco de Dados Recomendado</label>
+                    <div>
+                      <input type="radio" id="mysql" name="banco_dados" value="MySQL" required>
+                      <label for="mysql">MySQL</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="postgres" name="banco_dados" value="PostgreSQL">
+                      <label for="postgres">PostgreSQL</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="mongodb" name="banco_dados" value="MongoDB">
+                      <label for="mongodb">MongoDB</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="na" name="banco_dados" value="N/A">
+                      <label for="na">N/A</label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="turno" class="form-label">Turno para Reuniões</label>
+                    <select class="form-select" id="turno" required>
+                      <option value="" disabled selected>Selecione um turno</option>
+                      <option value="manha">Manhã</option>
+                      <option value="tarde">Tarde</option>
+                      <option value="noite">Noite</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="horario" class="form-label">Horário Sugerido</label>
+                    <input type="time" class="form-control" id="horario" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="data" class="form-label">Data Prevista de Entrega</label>
+                    <input type="date" class="form-control" id="data" required>
+                  </div>
+                </fieldset>
+          
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                  <button type="button" class="btn btn-secondary mt-2" id="limpar">Limpar</button>
+                </div>
+              </form>
+            </div>
+
+    <div id="experiencia">
+        <div class="container-sm">
+            <h3>Experiência Profissional:</h3>
+            <div class="card topExperiencia rounded-0 my-2"></div>
+            <table class="table">
+                <tr>
+                    <th>Período</th>
+                    <th>Instituição</th>
+                    <th>Experiência</th>
+                </tr>
+                <tr>
+                    <td>2024.1</td>
+                    <td>Senac-PE</td>
+                    <td>Gestor de Projetos</td>
+                </tr>
+                <tr>
+                    <td>2024.1</td>
+                    <td>Senac-PE</td>
+                    <td>Analista de Banco de Dados MySQL</td>
+                </tr>
+                <tr>
+                    <td>2024.2</td>
+                    <td>Senac-PE</td>
+                    <td>Dev Back end</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div id="menu">
-        <span><a href="../curriculo/componentes/curriculoSobre.html" target="main"><button><b>Sobre</b></button></a>   <a href="../curriculo/componentes/curriculoFormacao.html" target="main"><button><b>Formação Acadêmica</b></button></a>   <a href="../curriculo/componentes/curriculoExperiencia.html" target="main"><button><b>Experiência Profissional</b></button></a><br><br></span>        
-    </div>
-    <iframe src="../curriculo/componentes/curriculoSobre.html" frameborder="0" name="main"></iframe>
-    <hr>   
     <div id="endereco">
-        <h3>Endereço/Contato:</h3>
-        <address>
-            Desenvolvido: <a href="mailto:paulo.paes@edu.pe.senac.br"> Paulo Lemoine</a>.<br>
-            Visite: <a href=“https://github.com/PauloLemoine”> Portifólio GitHub</a><br>
-            Rua Sargento Silvino de Macedo, 155<br> Recife, PE – Brasil
-        </address>        
+        <div class="container-sm">
+            <h3>Endereço/Contato:</h3>
+            <div class="card topEndereco rounded-0 my-2"></div>
+            <address>
+                Desenvolvido: <a href="mailto:paulo.paes@edu.pe.senac.br"> Paulo Lemoine</a>.<br>
+                Visite: <a href=“https://github.com/PauloLemoine”> Portifólio GitHub</a><br>
+                Rua Sargento Silvino de Macedo, 155<br> Recife, PE – Brasil
+            </address>
+        </div>
     </div>
-    <hr>
     <footer>
         <span>Copyright © 2024 Paulo Lemoine. Todos os Direitos Reservados.</span>
+        <br>
+        <br>
+        <br>
     </footer>
 </body>
-</html>

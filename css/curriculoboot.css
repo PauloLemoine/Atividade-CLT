@@ -1,0 +1,87 @@
+footer {
+    text-align: center;
+}
+
+#apresentacao {
+    background-color: #E9EFEC;
+}
+
+#foto {
+    width: 100%;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+#sobre {
+    padding: 20px;
+}
+
+#sobreP {
+    text-align: justify;
+}
+
+#formacao {
+    background-color: #E9EFEC;
+    padding: 20px 0px 20px 0px;
+}
+
+#experiencia {
+    padding: 20px 0px 20px 0px;
+}
+
+#endereco {
+    background-color: #E9EFEC;
+    padding: 20px 0px 20px 0px;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.topSobre {
+    background-color: #16423C;
+    width: 8%;
+}
+
+.topFormacao {
+    background-color: #16423C;
+    width: 25%;
+}
+
+.topExperiencia {
+    background-color: #16423C;
+    width: 28%;
+}
+
+.topEndereco {
+    background-color: #16423C;
+    width: 22%;
+}
+
+.menuPaulo{
+    background-color: #16423C;
+}
+
+a.menuPaulo {
+    color: #E9EFEC;
+}
+
+body {
+    background-color: #f5f5f5;
+  }
+
+  .form-container {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
